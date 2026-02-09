@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
     cudaMalloc((void**)&d_B, bytesB);
     cudaMalloc((void**)&d_C, bytesC);
 
-    cudaMemcpy(d_A, h_A, bytesA, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A, h_A, bytesA, cudaMemcpyHostToDevice);   
     cudaMemcpy(d_B, h_B, bytesB, cudaMemcpyHostToDevice);
 
     dim3 threadsPerBlock(16, 16);
